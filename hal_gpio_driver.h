@@ -6,21 +6,21 @@
 #include "stm32f407xx.h"
 #include "stdint.h"
 
-#define GPIO_PIN_INPUT_MODE					((uint32_t) 0x00)
+#define GPIO_PIN_INPUT_MODE				((uint32_t) 0x00)
 #define GPIO_PIN_OUTPUT_MODE				((uint32_t) 0x01)
 #define GPIO_PIN_ALT_FUN_MODE				((uint32_t) 0x02)
 
-#define GPIO_PIN_OP_TYPE_PUSHPULL		((uint32_t) 0x00)
-#define GPIO_PIN_OP_TYPE_OPEN_DRAIN	((uint32_t) 0x01)
+#define GPIO_PIN_OP_TYPE_PUSHPULL			((uint32_t) 0x00)
+#define GPIO_PIN_OP_TYPE_OPEN_DRAIN			((uint32_t) 0x01)
 
-#define GPIO_PIN_SPEED_LOW					((uint32_t) 0x00)
+#define GPIO_PIN_SPEED_LOW				((uint32_t) 0x00)
 #define GPIO_PIN_SPEED_MEDIUM				((uint32_t) 0x01)
-#define GPIO_PIN_SPEED_HIGH					((uint32_t) 0x02)
-#define GPIO_PIN_SPEED_VERY_HIGH		((uint32_t) 0x03)
+#define GPIO_PIN_SPEED_HIGH				((uint32_t) 0x02)
+#define GPIO_PIN_SPEED_VERY_HIGH			((uint32_t) 0x03)
 
-#define GPIO_PIN_NO_PULL_UP_DOWN		((uint32_t) 0x00)
-#define GPIO_PIN_PULL_UP						((uint32_t) 0x01)
-#define GPIO_PIN_PULL_DOWN					((uint32_t) 0x10)
+#define GPIO_PIN_NO_PULL_UP_DOWN			((uint32_t) 0x00)
+#define GPIO_PIN_PULL_UP				((uint32_t) 0x01)
+#define GPIO_PIN_PULL_DOWN				((uint32_t) 0x10)
 
 #define GPIO_PORT_A GPIOA
 #define GPIO_PORT_B GPIOB
