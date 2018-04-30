@@ -10,12 +10,12 @@
 */ 
 typedef enum
 {
-		HAL_UART_STATE_RESET				=	0X00,	// UART	is not initialized yet
-		HAL_UART_STATE_READY				=	0X01, // UART is initialized and ready
-		HAL_UART_STATE_BUSY					=	0X02, // An internal process is ongoing
-		HAL_UART_STATE_BUSY_TX			=	0X12, // Data Transmission process is in progress
-		HAL_UART_STATE_BUSY_RX			=	0X22,	// Data Reception process is in progress
-		HAL_UART_STATE_BUSY_TX_RX		=	0X32, // Data Transmission and Reception process in progress
+	HAL_UART_STATE_RESET			=	0X00,	// UART	is not initialized yet
+	HAL_UART_STATE_READY			=	0X01, // UART is initialized and ready
+	HAL_UART_STATE_BUSY			=	0X02, // An internal process is ongoing
+	HAL_UART_STATE_BUSY_TX			=	0X12, // Data Transmission process is in progress
+	HAL_UART_STATE_BUSY_RX			=	0X22,	// Data Reception process is in progress
+	HAL_UART_STATE_BUSY_TX_RX		=	0X32, // Data Transmission and Reception process in progress
 }hal_uart_state_t;
 
 /* UART possible error codes */
