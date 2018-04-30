@@ -10,12 +10,12 @@
 */ 
 typedef enum
 {
-	HAL_UART_STATE_RESET			=	0X00,	// UART	is not initialized yet
-	HAL_UART_STATE_READY			=	0X01, // UART is initialized and ready
-	HAL_UART_STATE_BUSY			=	0X02, // An internal process is ongoing
-	HAL_UART_STATE_BUSY_TX			=	0X12, // Data Transmission process is in progress
-	HAL_UART_STATE_BUSY_RX			=	0X22,	// Data Reception process is in progress
-	HAL_UART_STATE_BUSY_TX_RX		=	0X32, // Data Transmission and Reception process in progress
+	HAL_UART_STATE_RESET		=	0X00, // UART	is not initialized yet
+	HAL_UART_STATE_READY		=	0X01, // UART is initialized and ready
+	HAL_UART_STATE_BUSY		=	0X02, // An internal process is ongoing
+	HAL_UART_STATE_BUSY_TX		=	0X12, // Data Transmission process is in progress
+	HAL_UART_STATE_BUSY_RX		=	0X22, // Data Reception process is in progress
+	HAL_UART_STATE_BUSY_TX_RX	=	0X32, // Data Transmission and Reception process in progress
 }hal_uart_state_t;
 
 /* UART possible error codes */
@@ -43,33 +43,33 @@ typedef enum
 #define _HAL_RCC_USART6_CLK_ENABLE()           (RCC->APB2ENR |=  ( 1 << 5))
 
 /* Bit definition for USART_SR register */
-#define USART_REG_SR_TXE_FLAG                	  ((uint32_t)( 1 << 7 ))
-#define USART_REG_SR_TC_FLAG                 		((uint32_t)( 1 << 6 ))
-#define USART_REG_SR_RXNE_FLAG               		((uint32_t)( 1 << 5 ))
-#define USART_REG_SR_IDLE_FLAG               		((uint32_t)( 1 << 4 ))
-#define USART_REG_SR_ORE_FLAG                		((uint32_t)( 1 << 3 ))
-#define USART_REG_SR_NE_FLAG                 		((uint32_t)( 1 << 2 ))
-#define USART_REG_SR_FE_FLAG                 		((uint32_t)( 1 << 1 ))
-#define USART_REG_SR_PE_FLAG                 		((uint32_t)( 1 << 0 ))
+#define USART_REG_SR_TXE_FLAG                   ((uint32_t)( 1 << 7 ))
+#define USART_REG_SR_TC_FLAG                    ((uint32_t)( 1 << 6 ))
+#define USART_REG_SR_RXNE_FLAG                  ((uint32_t)( 1 << 5 ))
+#define USART_REG_SR_IDLE_FLAG                  ((uint32_t)( 1 << 4 ))
+#define USART_REG_SR_ORE_FLAG                	((uint32_t)( 1 << 3 ))
+#define USART_REG_SR_NE_FLAG                 	((uint32_t)( 1 << 2 ))
+#define USART_REG_SR_FE_FLAG                 	((uint32_t)( 1 << 1 ))
+#define USART_REG_SR_PE_FLAG                 	((uint32_t)( 1 << 0 ))
 
 /* Bit definition for USART_BRR register  */
 #define USART_REG_BRR_MANTISSA                	((uint32_t)( 1 << 4 )) 
 #define USART_REG_BRR_FRACTION                	((uint32_t)( 1 << 0 )) 
 
 /* Bit definition for USART_CR1 register  */
-#define USART_REG_CR1_OVER8               			((uint32_t)( 1 << 15)) 
-#define USART_OVER8_ENABLE             					1
-#define USART_OVER16_ENABLE           					0
+#define USART_REG_CR1_OVER8               	((uint32_t)( 1 << 15)) 
+#define USART_OVER8_ENABLE             		1
+#define USART_OVER16_ENABLE           		0
 #define USART_REG_CR1_USART_EN                  ((uint32_t)( 1 << 13))   
 #define USART_REG_CR1_UART_WL                 	((uint32_t)( 1 << 12)) 
-#define USART_WL_1S8B            								0
-#define USART_WL_1S9B              							1
+#define USART_WL_1S8B            		0
+#define USART_WL_1S9B              		1
 #define USART_REG_CR1_TXE_INT_EN                ((uint32_t)( 1 << 7))   
 #define USART_REG_CR1_TCIE_INT_EN               ((uint32_t)( 1 << 6))   
 #define USART_REG_CR1_RXNE_INT_EN               ((uint32_t)( 1 << 5))   
 #define USART_REG_CR1_PEIE_INT_EN               ((uint32_t)( 1 << 8))   
-#define USART_REG_CR1_TE                  			((uint32_t)( 1 << 3))   
-#define USART_REG_CR1_RE                  			((uint32_t)( 1 << 2))   
+#define USART_REG_CR1_TE                  	((uint32_t)( 1 << 3))   
+#define USART_REG_CR1_RE                  	((uint32_t)( 1 << 2))   
 
 /* Bit definition for USART_CR2 register  */
 #define USART_REG_CR2_STOP_BITS                 12   
@@ -81,20 +81,20 @@ typedef enum
 /* Bit definition for USART_CR3 register  */
 #define USART_REG_CR3_ERR_INT_EN                ((uint32_t)( 1 << 0))  
 
-#define UART_STOPBITS_1        									((uint32_t)0x00)
-#define UART_STOPBITS_HALF     									((uint32_t)0x01)
-#define UART_STOPBITS_2        									((uint32_t)0x02)
-#define UART_STOPBITS_ONENHALF 									((uint32_t)0x03)
+#define UART_STOPBITS_1        			((uint32_t)0x00)
+#define UART_STOPBITS_HALF     			((uint32_t)0x01)
+#define UART_STOPBITS_2        			((uint32_t)0x02)
+#define UART_STOPBITS_ONENHALF 			((uint32_t)0x03)
 
-#define UART_PARITY_NONE                  			((uint32_t)0x00000000)
-#define UART_HWCONTROL_NONE               			((uint32_t)0x00000000)
+#define UART_PARITY_NONE                  	((uint32_t)0x00000000)
+#define UART_HWCONTROL_NONE               	((uint32_t)0x00000000)
 
-#define UART_MODE_TX_RX                     		((uint32_t)(USART_REG_CR1_TE |USART_REG_CR1_RE))
-#define UART_MODE_TX                      			((uint32_t)(USART_REG_CR1_TE) )
+#define UART_MODE_TX_RX                     	((uint32_t)(USART_REG_CR1_TE |USART_REG_CR1_RE))
+#define UART_MODE_TX                      	((uint32_t)(USART_REG_CR1_TE) )
 
-#define USART_BAUD_9600                   			(uint32_t)9600
-#define USART_BAUD_115200                 			(uint32_t)115200
-#define USART_BAUD_2000000                			(uint32_t)2000000
+#define USART_BAUD_9600                   	(uint32_t)9600
+#define USART_BAUD_115200                 	(uint32_t)115200
+#define USART_BAUD_2000000                	(uint32_t)2000000
 
 /*
   * @brief UART Init Structure definition  
