@@ -32,14 +32,14 @@
 #define GPIO_PORT_H GPIOH
 #define GPIO_PORT_I GPIOI
 
-#define _HAL_RCC_GPIOA_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 0))
-#define _HAL_RCC_GPIOB_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 1))
-#define _HAL_RCC_GPIOC_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 2))
-#define _HAL_RCC_GPIOD_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 3))
-#define _HAL_RCC_GPIOE_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 4))
-#define _HAL_RCC_GPIOF_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 5))
-#define _HAL_RCC_GPIOG_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 6))
-#define _HAL_RCC_GPIOH_CLK_ENABLE()			(RCC->AHB1ENR |= (1 << 7))
+#define _HAL_RCC_GPIOA_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 0))
+#define _HAL_RCC_GPIOB_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 1))
+#define _HAL_RCC_GPIOC_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 2))
+#define _HAL_RCC_GPIOD_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 3))
+#define _HAL_RCC_GPIOE_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 4))
+#define _HAL_RCC_GPIOF_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 5))
+#define _HAL_RCC_GPIOG_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 6))
+#define _HAL_RCC_GPIOH_CLK_ENABLE()	(RCC->AHB1ENR |= (1 << 7))
 
 typedef struct{
 	uint32_t	pin;
