@@ -5,7 +5,7 @@
 #include "stm32f407xx.h"
 #include "stdint.h"
 
-/** 
+/*
   * @brief HAL UART State structures definition  
 */ 
 typedef enum
