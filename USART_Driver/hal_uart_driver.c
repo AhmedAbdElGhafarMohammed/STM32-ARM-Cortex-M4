@@ -26,7 +26,7 @@ static void hal_uart_disable(USART_TypeDef *uartx)
 /*
 	* @brief  Enable/Disable the Transmit block of the  given USART peripheral 
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  te    : if te=1, then enable the Transmit block.
+  	* @param  te    : if te=1, then enable the Transmit block.
 	* @retval None
 */
 static void hal_uart_enable_disable_tx(USART_TypeDef *uartx, uint32_t te)
@@ -43,7 +43,7 @@ static void hal_uart_enable_disable_tx(USART_TypeDef *uartx, uint32_t te)
 /*
 	* @brief  Enable/Disable the Receive block of the  given USART peripheral 
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  te    : if re=1, then enable the Receive block.
+  	* @param  te    : if re=1, then enable the Receive block.
 	* @retval None
 */
 static void hal_uart_enable_disable_rx(USART_TypeDef *uartx, uint32_t re)
@@ -60,7 +60,7 @@ static void hal_uart_enable_disable_rx(USART_TypeDef *uartx, uint32_t re)
 /*
 	* @brief  Configures the word length for data transmission and reception 
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  wl    : if wl=1, then word length = 1s,9bits,nstop
+  	* @param  wl    : if wl=1, then word length = 1s,9bits,nstop
 	* @retval None
 */
 static void hal_uart_configure_word_length(USART_TypeDef *uartx, uint32_t wl)
@@ -78,7 +78,7 @@ static void hal_uart_configure_word_length(USART_TypeDef *uartx, uint32_t wl)
 /*
 	* @brief  Configures the number of stop bits 
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  nstop    : this value configures the stop bits
+  	* @param  nstop    : this value configures the stop bits
 	* @retval None
 */
 static void hal_uart_configure_stop_bits(USART_TypeDef *uartx, uint32_t nstop)
@@ -107,7 +107,7 @@ static void hal_uart_configure_stop_bits(USART_TypeDef *uartx, uint32_t nstop)
 /*
 	* @brief  Configures the over sampling rate of the USART peripheral 
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  over8     : if over8=1, then oversampling by 8 will be used , otherwise default Oversampling by 16
+  	* @param  over8     : if over8=1, then oversampling by 8 will be used , otherwise default Oversampling by 16
 	* @retval None
 */
 static void hal_uart_configure_over_sampling(USART_TypeDef *uartx, uint32_t over8)
@@ -121,7 +121,7 @@ static void hal_uart_configure_over_sampling(USART_TypeDef *uartx, uint32_t over
 /*
 	* @brief  Program the given baudrate 
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  baud     : baudrate value to be programmed
+  	* @param  baud     : baudrate value to be programmed
 	* @retval None
 */
 static void hal_uart_set_baud_rate(USART_TypeDef *uartx, uint32_t baud)
@@ -145,8 +145,8 @@ static void hal_uart_set_baud_rate(USART_TypeDef *uartx, uint32_t baud)
 /*
 	* @brief  Enable/Disable the TXE interrupt  
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  txe_en : if txe_en =1, then enable the TXE interrupt 
-  * @retval None
+  	* @param  txe_en : if txe_en =1, then enable the TXE interrupt 
+  	* @retval None
 */
 static void hal_uart_configure_txe_interrupt(USART_TypeDef *uartx, uint32_t txe_en)
 {
@@ -159,8 +159,8 @@ static void hal_uart_configure_txe_interrupt(USART_TypeDef *uartx, uint32_t txe_
 /*
 	* @brief  Enable/Disable the RXNE interrupt  
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  rxne_en: if rxne_en =1, then enable the RXNE interrupt 
-  * @retval None
+  	* @param  rxne_en: if rxne_en =1, then enable the RXNE interrupt 
+  	* @retval None
 */
 static void hal_uart_configure_rxne_interrupt(USART_TypeDef *uartx, uint32_t rxne_en)
 {
@@ -173,8 +173,8 @@ static void hal_uart_configure_rxne_interrupt(USART_TypeDef *uartx, uint32_t rxn
 /*
 	* @brief  Enable/Disable the Error interrupt (Frame error, noise error, overrun error) 
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  er_en  : if er_en =1, then enable the error interrupt 
-  * @retval None
+  	* @param  er_en  : if er_en =1, then enable the error interrupt 
+  	* @retval None
 */
 static void hal_uart_configure_error_interrupt(USART_TypeDef *uartx, uint32_t er_en)
 {
@@ -187,8 +187,8 @@ static void hal_uart_configure_error_interrupt(USART_TypeDef *uartx, uint32_t er
 /*
 	* @brief  Enable/Disable the parity error interrupt  
 	* @param  *uartx : base address of the USART or UART peripheral
-  * @param  pe_en  : if pe_en =1, then enable the Parity Error interrupt 
-  * @retval None
+  	* @param  pe_en  : if pe_en =1, then enable the Parity Error interrupt 
+  	* @retval None
 */
 static void hal_uart_configure_parity_error_interrupt(USART_TypeDef *uartx, uint32_t pe_en)
 {
@@ -201,8 +201,8 @@ static void hal_uart_configure_parity_error_interrupt(USART_TypeDef *uartx, uint
 /*
 	* @brief  Clear the error flag 
 	* @param  *huart : pointer to a uart_handle_t structure that contains
-  *                  the configuration information for the specified UART module.
-  * @retval None
+  	* @the configuration information for the specified UART module.
+  	* @retval None
 */
 static void hal_uart_clear_error_flag(uart_handle_t *huart)
 {
@@ -214,7 +214,7 @@ static void hal_uart_clear_error_flag(uart_handle_t *huart)
 /*
   * @brief  handle the TXE interrupt 
   * @param  huart: Pointer to a uart_handle_t structure that contains
-  *                the configuration information for the specified UART module.
+  * @the configuration information for the specified UART module.
   * @retval none
 */
 static void hal_uart_handle_TXE_interrupt(uart_handle_t *huart)
@@ -239,7 +239,7 @@ static void hal_uart_handle_TXE_interrupt(uart_handle_t *huart)
 /*
   * @brief Handle the Transmission Complete (TC) interrupt 
   * @param  huart: pointer to a uart_handle_t structure that contains
-  *                the configuration information for the specified UART module.
+  * the configuration information for the specified UART module.
   * @retval void
 */
 static void  hal_uart_handle_TC_interrupt(uart_handle_t *huart)
@@ -255,7 +255,7 @@ static void  hal_uart_handle_TC_interrupt(uart_handle_t *huart)
 /*
   * @brief  Handle the RXNE interrupt 
   * @param  huart: pointer to a uart_handle_t structure that contains
-  *                the configuration information for the specified UART module.
+  * the configuration information for the specified UART module.
   * @retval None
 */
 static void hal_uart_handle_RXNE_interrupt(uart_handle_t *huart)
@@ -294,7 +294,7 @@ static void hal_uart_handle_RXNE_interrupt(uart_handle_t *huart)
 /*
   * @brief  UART error callbacks.
   * @param  huart: pointer to a uart_handle_t structure that contains
-  *                the configuration information for the specified UART module.
+  * the configuration information for the specified UART module.
   * @retval None
 */
 void hal_uart_error_cb(uart_handle_t *huart)
@@ -334,8 +334,8 @@ void hal_uart_init(uart_handle_t *uart_handle)
 /*
 	* @brief  API to do UART data Transmission
 	* @param  *uart_handle : pointer to the handle structure of the UART Peripheral 
-  * @param  *buffer : holds the pointer to the TX buffer 
-  * @param  len     : len of the data to be TXed
+  	* @param  *buffer : holds the pointer to the TX buffer 
+ 	* @param  len     : len of the data to be TXed
 	* @retval None
 */
 void hal_uart_tx(uart_handle_t *uart_handle, uint8_t *buffer, uint32_t len)
@@ -355,8 +355,8 @@ void hal_uart_tx(uart_handle_t *uart_handle, uint8_t *buffer, uint32_t len)
 /*
 	* @brief  API to do UART data Reception  
 	* @param  *handle : pointer to the handle structure of the UART peripheral  
-  * @param  *buffer : holds the pointer to the RX buffer 
-  * @param  len     : len of the data to be RXed
+  	* @param  *buffer : holds the pointer to the RX buffer 
+  	* @param  len     : len of the data to be RXed
 	* @retval None
 */
 void hal_uart_rx(uart_handle_t *uart_handle, uint8_t *buffer, uint32_t len)
@@ -380,7 +380,7 @@ void hal_uart_rx(uart_handle_t *uart_handle, uint8_t *buffer, uint32_t len)
 /*
   * @brief  This function handles UART interrupt request.
   * @param  huart: pointer to a uart_handle_t structure that contains
-  *                the configuration information for the specified UART module.
+  * the configuration information for the specified UART module.
   * @retval None
 */
 void hal_uart_handle_interrupt(uart_handle_t *huart)
